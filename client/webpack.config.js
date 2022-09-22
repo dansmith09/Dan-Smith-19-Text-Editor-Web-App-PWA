@@ -21,7 +21,8 @@ module.exports = () => {
       // Webpack plugin that generates our html file and injects our bundles. 
       new HtmlWebpackPlugin({
         template: './index.html',
-        title: 'Just Another Text Editor'
+        title: 'Just Another Text Editor',
+        favicon: './favicon.ico'
       }),
      
       // Injects our custom service worker
@@ -46,12 +47,7 @@ module.exports = () => {
         icons: [
           {
             src: path.resolve('src/images/logo.png'),
-            sizes: [48, 96, 128, 192, 256, 384, 512],
-            destination: path.join('assets', 'icons'),
-          },
-          {
-            src: path.resolve('favicon.ico'),
-            sizes: "48x48",
+            sizes: [96, 128, 192, 256, 384, 512],
             destination: path.join('assets', 'icons'),
           },
         ],
