@@ -47,7 +47,7 @@ export const getDb = async () => {
   // Open up the desired object store.
   const store = tx.objectStore('jate');
 
-  // Use the .getAll() method to get all data in the database.
+  // Use the .get(1) method to get the first id of db
   const request = store.get(1);
 
   // Get confirmation of the request.
