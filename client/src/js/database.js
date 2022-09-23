@@ -48,7 +48,7 @@ export const getDb = async () => {
   const store = tx.objectStore('jate');
 
   // Use the .get(1) method to get the first id of db
-  const request = store.get(1);
+  const request = store.getAll();
 
   // Get confirmation of the request.
   const result = await request;
